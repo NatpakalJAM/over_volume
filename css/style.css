@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+    font-family: Sriracha;
+    color: #fff;
+    background-color: #263238;
+}
+
+/* start index */
+
+.main-content {
+    min-height: 100vh
+}
+
+.tracking-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: auto;
+    margin: 0;
+}
+
+.trex {
+    position: relative;
+}
+
+.trex .trex-arm-front,
+.trex .trex-arm-back {
+    position: absolute;
+    transform-origin: 80% 20%;
+}
+
+.trex .trex-arm-back {
+    top: 110px;
+    left: 70px;
+}
+
+.trex .trex-arm-front {
+    top: 120px;
+    left: 80px;
+}
+
+.trex .trex-body .trex-eye {
+    position: relative;
+    top: 39px;
+    left: 60px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e6e6e6;
+}
+
+.trex .trex-body .trex-eye:after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 1px;
+    border-radius: 50%;
+    background-color: #4d3019;
+}
+
+.rotate-arm {
+    animation: 1s linear infinite rotate;
+    position: relative;
+    transform-origin: 50% 100%;
+}
+
+.rotate-eye {
+    animation: 1s linear infinite rotate;
+    position: relative;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    70% {
+        transform: rotate(80deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+.neon {
+    color: #fff;
+    font-size: 14vh;
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa;
+}
+
+.flicker-slow {
+    animation: flicker 3s linear infinite;
+}
+
+.flicker-fast {
+    animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    70%,
+    100% {
+        opacity: 0.99;
+    }
+
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    69.999% {
+        opacity: 0.4;
+    }
+}
+
+.btn-play {
+    font-size: 5vh;
+    padding: 0 10vw;
+    animation: btn-play 1s linear infinite;
+}
+
+@keyframes btn-play {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* end index */
