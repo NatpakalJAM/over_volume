@@ -1,0 +1,22 @@
+{
+    "name": "Over Volume",
+    "short_name": "OverVolume",
+    "scope": "/",
+    "display": "browser",
+    "start_url": "https://over-volume.web.app/",
+    "description": "OverVolume | เกินเบอร์",
+    "prefer_related_applications": false,
+    "url": "https://over-volume.web.app/",
+    "icons": [{
+            "src": "img/icon/logo-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "img/icon/logo-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "theme_color": "#263238"
+}
