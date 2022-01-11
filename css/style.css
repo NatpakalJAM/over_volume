@@ -90,7 +90,7 @@ body {
 
 .neon {
     color: #fff;
-    font-size: 14vh;
+    font-size: 15vw;
     font-weight: 400;
     letter-spacing: 8px;
     text-shadow:
@@ -134,8 +134,9 @@ body {
 }
 
 .btn-play {
-    font-size: 5vh;
-    padding: 0 10vw;
+    font-size: 5vw;
+    /* padding: 0 10vw; */
+    width: 40vw;
     animation: btn-play 1s linear infinite;
 }
 
@@ -154,3 +155,92 @@ body {
 }
 
 /* end index */
+
+/* start random card */
+
+#cardGame .card {
+    position: relative;
+    /* margin: 1%; */
+    width: 45vh;
+    height: 70vh;
+    cursor: pointer;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    transition: -webkit-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+    transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+    border-radius: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#cardGame .front,
+#cardGame .back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    border: 2px solid #415661;
+    /* box-shadow: -6px -6px 36px 2px rgba(0, 0, 0, 0.15) inset; */
+    box-shadow: 0px 0px 20px 0px #0fa;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+#cardGame .front:before,
+#cardGame .front:after,
+#cardGame .back:before,
+#cardGame .back:after {
+    content: "";
+    position: absolute;
+}
+
+#cardGame .front {
+    font-size: 35vh;
+    word-wrap: break-word;
+    background-color: #fff;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cardGame .back {
+    background-color: #415661;
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    transition: transform .2s;
+}
+
+#cardGame .back-font {
+    font-size: 5vh !important;
+}
+
+#cardGame .is-selected {
+    -webkit-transform: translate3d(0, 0, 0) rotateY(180deg);
+    transform: translate3d(0, 0, 0) rotateY(180deg);
+}
+
+#cardGame .disable-click {
+    pointer-events: none;
+}
+
+/* end random card */
