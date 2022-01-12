@@ -1,8 +1,8 @@
 {
-    "name": "Over Volume",
-    "short_name": "OverVolume",
+    "name": "OverVolume",
+    "short_name": "เกินเบอร์",
     "scope": "/",
-    "display": "browser",
+    "display": "fullscreen",
     "start_url": "https://over-volume.web.app/",
     "description": "OverVolume | เกินเบอร์",
     "prefer_related_applications": false,
